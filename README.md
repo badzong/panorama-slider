@@ -7,13 +7,13 @@ Slide content and images across beautiful panorama images.
 Getting started
 ---------------
 
-The panorama-slider uses Jquery, so first of all you need to include a recent
+The panorama-slider uses JQuery, so first of all you need to include a recent
 version of JQuery into your Webpage. If you want nice icons for the dots, the
 forward and the reverse button, you also need to include font awesome.
 
 The other thing you need is a wide panorama image. The wider the better. If you
 don't have an image at hand, you can find very beautiful panoramas
-[here]("http://commons.wikimedia.org/wiki/Commons:Featured_pictures/Places/Panoramas").
+[here]("http://commons.wikimedia.org/wiki/Commons:Featured_pictures/Places/Panoramas" "Panoramas").
 
 Basic page structure:
 
@@ -23,9 +23,22 @@ Basic page structure:
         <title>Slider Example</title>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link href="http://panorama-slider.com/panorama-slider.min.css" rel="stylesheet">
+        <style>
+          body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+          }
+          h1 {
+            margin: 40px;
+          }
+          #slider {
+            background-image: url(panorama.jpg);
+          }
+        </style>
       </head>
       <body>
-        <div id="slider" style="background-image: url('panorama.jpg');">
+        <div id="slider">
           <div>
             <div>
               <h1>Slide 1</h1>
@@ -48,7 +61,7 @@ Basic page structure:
 
 The div with the id *slider* holds all slides and has the panorama image set as
 background. Within that div you have three divs, the slides. The result looks
-like [this]("http://panorama-slider.com/example/basic.html").
+like [this]("http://panorama-slider.com/example/basic.html" "Example").
 
 
 Options

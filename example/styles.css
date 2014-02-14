@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  margin: 0;
+  padding: 20px 0;
+  background: linear-gradient(to bottom, #fff 0%,#eee 100%);
+  border-bottom: solid 2px #ccc;
+}
+
+footer {
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #3B73EB;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+.code
+{
+  white-space: pre;
+  background-color: #F2F0B6;
+  padding: 10px 40px;
+  font-family: monospace;
+}
+
+.container {
+  width: 60%;
+  min-width: 800px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content
+{
+  padding: 20px 0;
+}
+
+.content h2, .content h3
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.content p
+{
+  margin: 10px 0;
+}
+
+.github {
+  border-top: solid 2px #ccc;
+  border-bottom: solid 1px #ccc;
+  background-color: #eee;
+  padding: 20px 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+#slider {
+  background-image: url(panorama.jpg);
+}
+
+.slide {
+  padding: 40px 0;
+}
+
+.slide h2, .slide h3 {
+  margin: 0;
+}
+
+.slide h2 {
+  margin-top: 8px;
+  font-size: 32px;
+}
+
+.slide h3 {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.slide h2+h3 {
+  margin-top: 40px;
+}
+
+.slide h2 span, #slider h3 span {
+  display: inline-block;
+  color: white;
+}
+
+.slide h2 span {
+  padding: 4px 10px;
+  background-color: rgba(154,232,9,.7);
+}
+
+.slide h3 span {
+  padding: 2px 10px;
+  background-color: rgba(0,0,0,.6);
+}

@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Slider Example</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="/panorama-slider.min.css" rel="stylesheet">
+    <link href="/example/styles.css" rel="stylesheet">
+    <style>
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>panorama slider<h2>
+      </div>
+    </header>
+    <div id="slider">
+      <div>
+        <div>
+          <div class="slide container">
+            <h2><span>panorama-slider a JQuery based content slider</span></h2>
+            <h2><span>Slide content across beautiful panorama images</span></h2>
+            <h3><span>Uses JQuery</span></h3>
+            <h3><span>And Font Awesome icons</span></h3>
+            <h3><span>Just add .pslider()</span></h3>
+          </div>
+        </div>
+        <div>
+          <div class="slide container">
+            <h2><span>Simple and easy to use</span></h2>
+            <h2><span>Add more marketing speech here</span></h2>
+            <h3><span>Free License</span></h3>
+            <h3><span>Public Domain</span></h3>
+          </div>
+        </div>
+        <div>
+          <div class="slide container">
+            <h2><span>Example Slide 3</span></h2>
+            <h2><span>Foobar</span></h2>
+            <h2><span>Hello World</span></h2>
+            <h3><span>Deep Blue Sky</span></h3>
+            <h3><span>Trees and Hayballs</span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="github">
+      <div class="container">
+        <a href="https://github.com/badzong/panorama-slider"><i class="fa fa-github"></i> https://github.com/badzong/panorama-slider</a>
+      </div>
+    </div>
+    <div class="content container">
+      <h2>Getting started</h2>
+      <p>
+        The panorama-slider uses JQuery, so first of all you need to include a recent
+        version of JQuery into your Webpage. If you want nice icons for the dots, the
+        forward and the reverse button, you also need to include font awesome.
+      </p>
+      <p>
+        The other thing you need is a wide panorama image. The wider the better. If you
+        don't have an image at hand, you can find very beautiful panoramas
+        <a href="http://commons.wikimedia.org/wiki/Commons:Featured_pictures/Places/Panoramas">here</a>.
+      </p>
+
+      <h3>Basic page structure:</h3>
+      <div class="code">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;Slider Example&lt;/title&gt;
+    &lt;link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"&gt;
+    &lt;link href="http://panorama-slider.com/panorama-slider.min.css" rel="stylesheet"&gt;
+    &lt;style&gt;
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin: 40px;
+      }
+      #slider {
+        background-image: url(panorama.jpg);
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="slider"&gt;
+      &lt;div&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Slide 1&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Slide 2&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;h1&gt;Slide 3&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://panorama-slider.com/panorama-slider.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $('#slider').pslider();
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </div>
+      <p>
+        The div with the id <strong>slider</strong> holds all slides and has the panorama image set as
+        background. Within that div you have three divs, the slides. The result looks
+        like <a href="http://panorama-slider.com/example/basic.html">this</a>.
+      <p>
+    </div>
+    <footer>
+      <div class="container text-right">
+        <a href="http://px64.net">PX64</a>
+        <a href="http://andev.ch">ANDEV</a>
+      </div>
+    </footer>
+
+    <a href="https://github.com/badzong/panorama-slider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://panorama-slider.com/panorama-slider.min.js"></script>
+    <script>
+      $('#slider').pslider({
+        interval: 5000,
+      });
+    </script>
+  </body>
+</html>
