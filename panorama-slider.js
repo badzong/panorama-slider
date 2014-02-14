@@ -2,13 +2,13 @@ function PSlider(params, index, element) {
     // defaults
     this.debug = false;
     this.dots = true;
-    this.dotActive = 'fa-circle';
-    this.dotInactive = 'fa-circle-o';
+    this.dotActive = 'fa fa-circle';
+    this.dotInactive = 'fa fa-circle-o';
     this.dotSize = 0.04;
-    this.chevrons = true;
-    this.chevronLeft = 'fa-chevron-left';
-    this.chevronRight = 'fa-chevron-right';
-    this.chevronSize = 0.1;
+    this.angles = true;
+    this.angleLeft = 'fa fa-angle-left';
+    this.angleRight = 'fa fa-angle-right';
+    this.angleSize = 0.1;
     this.interval = 8000;
     this.currentSlide = 0;
     this.circularBackground = false;
@@ -22,9 +22,9 @@ function PSlider(params, index, element) {
     this.psliderSlide = this.psliderPrefix + 'slide';
     this.psliderDots = this.psliderPrefix + 'dots';
     this.psliderDot = this.psliderPrefix + 'dot';
-    this.psliderChevron = this.psliderPrefix + 'chevron';
-    this.psliderChevronLeft = this.psliderChevron + '-left';
-    this.psliderChevronRight = this.psliderChevron + '-right';
+    this.psliderAngle = this.psliderPrefix + 'angle';
+    this.psliderAngleLeft = this.psliderAngle + '-left';
+    this.psliderAngleRight = this.psliderAngle + '-right';
     this.psliderActive = this.psliderPrefix + 'active';
     this.psliderInactive = this.psliderPrefix + 'inactive';
     this.psliderHidden = this.psliderPrefix + 'hidden';
@@ -65,8 +65,8 @@ function PSlider(params, index, element) {
         var html = '<div class="' + this.psliderDots + '">';
         for (i = 0; i < this.slideCount; ++ i) {
             html += '<span class="' + this.psliderInactive + '">';
-            html += '<i class="' + this.psliderActive + ' fa ' + this.dotActive + '"></i>';
-            html += '<i class="' + this.psliderInactive + ' fa ' + this.dotInactive + '"></i>';
+            html += '<i class="' + this.psliderActive + ' ' + this.dotActive + '"></i>';
+            html += '<i class="' + this.psliderInactive + ' ' + this.dotInactive + '"></i>';
             html += '</span>';
         }
         html += '</div>';
@@ -77,13 +77,13 @@ function PSlider(params, index, element) {
         });
     };
 
-    // Add the chevrons
-    if (this.chevrons) {
-        this.element.append('<div class="' + this.psliderChevron + ' ' + this.psliderChevronLeft + '"><i class="fa ' + this.chevronLeft +'"></i></div>');
-        this.element.append('<div class="' + this.psliderChevron + ' ' + this.psliderChevronRight + '"><i class="fa ' + this.chevronRight +'"></i></div>');
+    // Add the angles
+    if (this.angles) {
+        this.element.append('<div class="' + this.psliderAngle + ' ' + this.psliderAngleLeft + '"><i class="' + this.angleLeft +'"></i></div>');
+        this.element.append('<div class="' + this.psliderAngle + ' ' + this.psliderAngleRight + '"><i class="' + this.angleRight +'"></i></div>');
 
-        var left = this.element.find('.' + this.psliderChevronLeft);
-        var right = this.element.find('.' + this.psliderChevronRight);
+        var left = this.element.find('.' + this.psliderAngleLeft);
+        var right = this.element.find('.' + this.psliderAngleRight);
 
         var slider = this;
         left.click(function() {
@@ -147,16 +147,16 @@ PSlider.prototype.slide = function(index) {
         $(this.element.find('.' + this.psliderDots + ' span')[this.currentSlide]).removeClass(this.psliderInactive).addClass(this.psliderActive);
     }
 
-    if (this.chevrons)
+    if (this.angles)
     {
-        this.element.find('.' + this.psliderChevron).removeClass(this.psliderHidden);
+        this.element.find('.' + this.psliderAngle).removeClass(this.psliderHidden);
         if (this.currentSlide == 0)
         {
-            this.element.find('.' + this.psliderChevronLeft).addClass(this.psliderHidden);
+            this.element.find('.' + this.psliderAngleLeft).addClass(this.psliderHidden);
         }
         if (this.currentSlide == this.slideCount - 1)
         {
-            this.element.find('.' + this.psliderChevronRight).addClass(this.psliderHidden);
+            this.element.find('.' + this.psliderAngleRight).addClass(this.psliderHidden);
         }
     }
 }
@@ -227,14 +227,14 @@ PSlider.prototype.load = function() {
     var dotSize = parseInt(this.backgroundHeight * this.dotSize);
     this.element.find('.' + this.psliderDots).css('font-size', dotSize + 'px');
 
-    // Set chevron height
-    var chevronSize = parseInt(this.backgroundHeight * this.chevronSize);
-    var chevronCss = {
-        'font-size': chevronSize + 'px',
-        'top': parseInt((this.backgroundHeight - chevronSize) / 2) + 'px',
+    // Set angle height
+    var angleSize = parseInt(this.backgroundHeight * this.angleSize);
+    var angleCss = {
+        'font-size': angleSize + 'px',
+        'top': parseInt((this.backgroundHeight - angleSize) / 2) + 'px',
     };
-    this.element.find('.' + this.psliderChevronLeft).css(chevronCss);
-    this.element.find('.' + this.psliderChevronRight).css(chevronCss);
+    this.element.find('.' + this.psliderAngleLeft).css(angleCss);
+    this.element.find('.' + this.psliderAngleRight).css(angleCss);
 
     // Set height
     if (this.height) {
