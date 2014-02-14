@@ -71,6 +71,28 @@ a:hover
   padding: 20px 0;
 }
 
+.source
+{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.source a
+{ 
+  color: black;
+  text-decoration: underline;
+  opacity: .8;
+  transition: .5s;
+}
+
+.source a:hover
+{ 
+  color: white;
+  opacity: 1;
+}
+
 .text-right {
   text-align: right;
 }
