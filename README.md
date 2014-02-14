@@ -27,13 +27,15 @@ Basic page structure:
       <body>
         <div id="slider" style="background-image: url('panorama.jpg');">
           <div>
-            <h1>Slide 1</h1>
-          </div>
-          <div>
-            <h1>Slide 2</h1>
-          </div>
-          <div>
-            <h1>Slide 3</h1>
+            <div>
+              <h1>Slide 1</h1>
+            </div>
+            <div>
+              <h1>Slide 2</h1>
+            </div>
+            <div>
+              <h1>Slide 3</h1>
+            </div>
           </div>
         </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
