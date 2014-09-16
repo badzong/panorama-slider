@@ -220,7 +220,7 @@ PSlider.prototype.load = function() {
     this.log(this.backgroundUrl +'(' + this.backgroundWidth + 'x' + this.backgroundHeight + ')');
 
     // Calculate background animation offset
-    this.backgroundOffset = Math.abs((this.backgroundWidth - this.element.width()) / this.slideCount);
+    this.backgroundOffset = Math.abs((this.backgroundWidth - this.element.width()) / (this.slideCount - 1));
     this.log('backgroundOffset: ' + this.backgroundOffset);
 
     // Set dot height
