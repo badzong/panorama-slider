@@ -188,6 +188,30 @@ PSlider.prototype.dotClick = function(dot) {
     this.play();
 }
 
+PSlider.prototype.visible = function() {
+    var key = false;
+    if (typeof document.hidden !== "undefined") {
+        key = 'hidden';
+    }
+    else if (typeof document.mozHidden !== "undefined") {
+        key = 'mozHidden';
+    }
+    else if (typeof document.msHidden !== "undefined") {
+        key = 'msHidden';
+    }
+    else if (typeof document.webkitHidden !== "undefined") {
+        key = 'webkitHidden';
+    }
+
+    // Fallback: always visible
+    if (!key)
+    {
+        return true;
+    }
+
+    return !document[key];
+}
+
 PSlider.prototype.play = function() {
     if(this.windowInterval)
     {
@@ -196,7 +220,9 @@ PSlider.prototype.play = function() {
 
     var slider = this
     this.windowInterval = window.setInterval(function() {
-        slider.nextSlide();
+        if (slider.visible()) {
+            slider.nextSlide();
+        }
     }, this.interval);
 }
 
